@@ -10,6 +10,6 @@ I conduct research for the pure joy of discovery and the excitement of uncoverin
 
 ### Stay Connected
 
-Explore my [research](/research/), view my [CV](/cv/), or learn more about my current [projects](/projects/). For inquiries and collaboration opportunities, please feel free to reach out via email.
+Explore my [research](https://soegampars.github.io/academicblog/research/), view my [CV](https://soegampars.github.io/academicblog/cv/), or learn more about my current [projects](https://soegampars.github.io/academicblog/projects/). For inquiries and collaboration opportunities, please feel free to reach out via email.
 
 ---
