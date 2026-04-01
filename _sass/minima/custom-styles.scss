@@ -1,190 +1,351 @@
-// Placeholder to allow defining custom styles that override everything else.
-// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+// ============================================
+// VISUAL REDESIGN — Contemporary Academic Blog
+// ============================================
 
-// Enhanced Typography and Readability
+$accent: #FA5D29;
+
+// ------------------------------------
+// Global
+// ------------------------------------
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-// Improved homepage welcome section
-.home {
-  .page-heading {
-    font-weight: 600;
-    color: #2a2a2a;
-    margin-bottom: 1.5rem;
+a {
+  color: $accent;
+  text-decoration: none;
+  transition: color 0.25s ease;
+
+  &:visited {
+    color: darken($accent, 8%);
+  }
+
+  &:hover {
+    color: darken($accent, 15%);
   }
 }
 
-// Enhanced post title styling
-.post-title {
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 0.5rem;
+// ------------------------------------
+// Header
+// ------------------------------------
+.site-header {
+  border-top: 4px solid $accent;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1.5rem 0;
+  min-height: auto;
+  background: #fff;
 }
 
-// Better post metadata styling
-.post-meta {
-  font-size: 0.9rem;
-  color: #757575;
-  font-style: italic;
+.site-title {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+  color: $text-color !important;
+
+  &:hover {
+    color: $accent !important;
+    text-decoration: none;
+  }
+
+  &,
+  &:visited {
+    color: $text-color !important;
+  }
+}
+
+.site-nav {
+  .page-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $grey-color-dark;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.25s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $accent;
+      transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    &:hover {
+      color: $accent;
+      text-decoration: none;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ------------------------------------
+// Typography
+// ------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $text-color;
+}
+
+.post-title,
+.page-heading,
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.post-content h2,
+.page-content h2 {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid $accent;
 }
 
-// Improved post list styling
+.post-content h3,
+.page-content h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: $grey-color-dark;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 3rem 0;
+}
+
+// ------------------------------------
+// Blockquotes
+// ------------------------------------
+blockquote {
+  border-left: 4px solid $accent;
+  background: $grey-color-light;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// ------------------------------------
+// Code blocks
+// ------------------------------------
+code {
+  border-radius: 3px;
+}
+
+// ------------------------------------
+// Homepage hero
+// ------------------------------------
+.home-hero {
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e0e0e0;
+
+  .hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: $text-color;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    color: $grey-color;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+}
+
+// ------------------------------------
+// Post list
+// ------------------------------------
 .post-list {
-  li {
-    padding: 1.5rem 0;
+  list-style: none;
+  margin-left: 0;
+
+  > li {
+    padding: 1.25rem 0;
     border-bottom: 1px solid #e8e8e8;
 
     &:last-child {
       border-bottom: none;
     }
   }
-}
-
-// Enhanced link styling
-.post-link {
-  color: #2c5282;
-  font-weight: 500;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: #1a365d;
-    text-decoration: none;
-  }
-}
-
-// Better paragraph spacing
-.post-content p {
-  margin-bottom: 1.2rem;
-  line-height: 1.7;
-}
-
-// Enhanced blockquote styling
-.post-content blockquote {
-  border-left: 4px solid #2c5282;
-  padding-left: 1.5rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  color: #555;
-}
-
-// Improved code block styling
-.post-content code {
-  background-color: #f5f5f5;
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-  font-size: 0.9em;
-}
-
-.post-content pre {
-  background-color: #f5f5f5;
-  border: 1px solid #e1e4e8;
-  border-radius: 6px;
-  padding: 1rem;
-  overflow-x: auto;
-}
-
-// Enhanced header styling
-.site-header {
-  border-top: 3px solid #2c5282;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.site-title {
-  font-weight: 500;
-  letter-spacing: -0.5px;
-}
-
-// Better navigation styling
-.site-nav .page-link {
-  color: #4a5568;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: #2c5282;
-  }
-}
-
-// Improved footer styling
-.site-footer {
-  background-color: #f8f9fa;
-  margin-top: 3rem;
-}
-
-// Enhanced list styling in content
-.post-content ul, .post-content ol {
-  margin-bottom: 1.2rem;
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-}
-
-// Better heading spacing
-.post-content {
-  h2 {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    color: #2a2a2a;
-  }
 
   h3 {
-    margin-top: 2rem;
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-    color: #2a2a2a;
+    margin: 0.25rem 0 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+
+    .post-link {
+      color: $text-color;
+      text-decoration: none;
+      transition: color 0.25s ease;
+
+      &:hover {
+        color: $accent;
+      }
+
+      &:visited {
+        color: $text-color;
+      }
+    }
   }
 }
 
-// Academic-style horizontal rule
-.post-content hr {
-  border: none;
-  border-top: 2px solid #e8e8e8;
-  margin: 2rem 0;
+.post-meta {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $grey-color;
 }
 
-// Improved table styling
-.post-content table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1.5rem 0;
+// ------------------------------------
+// Post / Page content
+// ------------------------------------
+.page-content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 
-  th, td {
-    border: 1px solid #ddd;
-    padding: 0.75rem;
-    text-align: left;
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+// Lists in content
+.post-content,
+.page-content {
+  ul, ol {
+    li {
+      margin-bottom: 0.4rem;
+    }
   }
 
-  th {
-    background-color: #f5f5f5;
-    font-weight: 600;
+  // Strong text accent
+  strong {
+    font-weight: 700;
   }
 
-  tr:nth-child(even) {
-    background-color: #fafafa;
+  // Links in content with underline on hover
+  a {
+    text-decoration: none;
+    background-image: linear-gradient($accent, $accent);
+    background-size: 0% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease, color 0.25s ease;
+
+    &:hover {
+      background-size: 100% 1.5px;
+    }
   }
 }
 
-// Social media links enhancement
-.social-media-list a {
-  transition: all 0.2s ease;
+// ------------------------------------
+// Footer
+// ------------------------------------
+.site-footer {
+  background: #f0f0f0;
+  border-top: 1px solid #e0e0e0;
+  padding: 2rem 0;
+}
+
+.footer-col-wrapper {
+  color: $grey-color;
+  font-size: 0.9rem;
+}
+
+.footer-col-wrapper a {
+  color: $grey-color-dark;
+  transition: color 0.25s ease;
 
   &:hover {
-    transform: translateY(-2px);
-    border-color: #2c5282 !important;
+    color: $accent;
   }
 }
 
-// Responsive improvements
+// Social icons in footer
+.social-media-list {
+  li {
+    a {
+      color: $grey-color;
+
+      &:hover {
+        color: $accent;
+
+        .svg-icon {
+          fill: $accent;
+        }
+      }
+    }
+  }
+
+  .svg-icon {
+    fill: $grey-color;
+    transition: fill 0.25s ease;
+  }
+}
+
+// ------------------------------------
+// Tables
+// ------------------------------------
+table {
+  border-radius: 4px;
+  overflow: hidden;
+
+  th {
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+}
+
+// ------------------------------------
+// Responsive adjustments
+// ------------------------------------
 @media screen and (max-width: 600px) {
-  .post-title {
+  .home-hero .hero-title {
+    font-size: 2rem;
+  }
+
+  .post-title,
+  .page-heading,
+  h1 {
     font-size: 1.8rem;
   }
 
-  .post-content {
-    font-size: 0.95rem;
+  .post-content h2,
+  .page-content h2 {
+    font-size: 1.35rem;
+  }
+
+  .post-list h3 {
+    font-size: 1.15rem;
   }
 }

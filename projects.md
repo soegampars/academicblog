@@ -20,7 +20,13 @@ I run this project in my spare time to create a comprehensive, accessible databa
 
 These data are mostly scraped from the PDF publications of Indonesian Badan Pusat Statistik (*Central Statistical Bureau*). Our scraping and cleaning process ensures that this valuable information is more accessible and usable for researchers and analysts.
 
-Check this project out on GitHub: [https://github.com/soegampars/idbt](https://github.com/soegampars/idbt)
+### Try It Out
+
+The IDBT platform features a renewed interactive interface where you can search, filter by topic, province, and time range, and download Indonesian statistical data in CSV format.
+
+**[Launch IDBT App](https://soegampars.github.io/idbt/)**
+
+Source code on GitHub: [https://github.com/soegampars/idbt](https://github.com/soegampars/idbt)
 
 ### Get Involved
 
