@@ -12,9 +12,9 @@ My research interests are mainly on the topics of spatial methods and regional e
 
 Pekerti, I.S. & Fitrianto, G. (2026) _Examination of Indonesian Interprovincial Development Inequality Through Network Analysis_. Working Paper.
 
-Fitrianto, G. & Pekerti, I.S. (2025) _Enabling Million-Cell Spatial Econometrics: Sparse Matrix Methods for National-Scale Analysis_. Submitted to Journal.
-
 ### Journal Articles
+
+Fitrianto, G. & Pekerti, I.S. (forthcoming) _Constructing Million-Cell Spatial Weight Matrices on Irregular Support: A Kronecker-Plus-Projection Workflow_, Letters in Spatial and Resource Sciences.
 
 Asyahid, E.A. & Pekerti, I.S. (2022) _Economic Impact of Natural Disasters, Spillovers, and Role of Human Development: Case of Indonesia_, Letters in Spatial and Resource Sciences, 15, 493--506. DOI: [10.1007/s12076-022-00307-7](https://doi.org/10.1007/s12076-022-00307-7)
 
